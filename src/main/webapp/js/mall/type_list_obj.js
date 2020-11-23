@@ -1,140 +1,365 @@
-/**
- * Created by alone on 2017/5/15.
- */
-var pingguo = createObject(1, '苹果');
-var sanxing = createObject(2, '三星');
-var xiaomi = createObject(3, '小米');
-var huawei = createObject(4, '华为');
-var zhongxing = createObject(5, '中兴');
-var lianxiang = createObject(6, '联想');
-var meizhu = createObject(7, '魅族');
-var qitas = createObject(8, '其他');
-var erjis = createObject(9, '耳机');
+var zhengji = createObject(1, '整机');
+var baohumo = createObject(2, '保护膜');
+var shoujike = createObject(3, '手机壳');
+var qitashouji = createObject(4, '其他');
 var shouji = new Object();
 shouji.name = '手机';
-shouji.content = [pingguo, sanxing, xiaomi, huawei, zhongxing, lianxiang, meizhu, qitas, erjis];
-var putongxiangji = createObject(10, '普通相机');
-var danfan = createObject(11, '单反');
-var qitax = createObject(12, '其他');
-var content = [putongxiangji, danfan, qitax];
-var xiangji = createType('相机', content);
-var bijiben = createObject(13, '笔记本');
-var pingban = createObject(14, '平板电脑');
-var taishi = createObject(15, '台式电脑');
-var xianshiqi = createObject(16, '显示器');
-var shubiao = createObject(17, '鼠标');
-var yingpan = createObject(18, '硬盘');
-var upan = createObject(19, 'U盘');
-var yidongyingpan = createObject(20, '移动硬盘');
-var qitad = createObject(21, '其他');
-var content1 = [bijiben, pingban, taishi, xianshiqi, shubiao,
-    yingpan, upan, yidongyingpan, qitad];
-var diannao = createType('电脑', content1);
-var xiyiji = createObject(22, '洗衣机');
-var yinshuiji = createObject(23, '饮水机');
-var chuifengji = createObject(24, '吹风机');
-var tixudao = createObject(25, '剃须刀');
-var fengshan = createObject(26, '风扇');
-var zhudanqi = createObject(27, '煮蛋器');
-var diancilu = createObject(28, '电磁炉');
-var dianfanbao = createObject(29, '电饭煲');
-var qitaj = createObject(30, '其他');
-var content2 = [xiyiji, yinshuiji, chuifengji, tixudao,
-    fengshan, zhudanqi, diancilu, dianfanbao, qitaj];
-var jiadian = createType('家电', content2);
-var erjiy = createObject(31, '耳机');
-var yinxiang = createObject(32, '音响');
-var gongfang = createObject(33, '功放');
-var diyingpao = createObject(34, '低音炮');
-var maikefeng = createObject(35, '麦克风');
-var content3 = [erjiy, yinxiang, gongfang, diyingpao, maikefeng];
-var yingyin = createType('影音', content3);
-var shangyi = createObject(36, '上衣');
-var kuzi = createObject(37, '裤子');
-var qunzi = createObject(38, '裙子');
-var qitan = createObject(39, '其他');
-var content4 = [shangyi, kuzi, qunzi, qitan];
-var nvzhuang = createType('女装', content4);
-var shangyin = createObject(40, '上衣');
-var kuzin = createObject(41, '裤子');
-var qitanan = createObject(42, '其他');
-var content5 = [shangyin, kuzin, qitanan];
-var nanzhuang = createType('男装', content5);
-var yundongxie = createObject(43, '运动鞋');
-var pixie = createObject(44, '皮鞋');
-var fanbuxie = createObject(45, '帆布鞋');
-var qiuxie = createObject(46, '球鞋');
-var banxie = createObject(47, '板鞋');
-var qitaxie = createObject(48, '其他');
-var content6 = [yundongxie, pixie, fanbuxie, qiuxie, banxie, qitaxie];
-var nvxie = createType('女鞋', content6);
-var yundongxienan = createObject(49, '运动鞋');
-var pixienan = createObject(50, '皮鞋');
-var fanbuxienan = createObject(51, '帆布鞋');
-var qiuxienan = createObject(52, '球鞋');
-var banxienan = createObject(53, '板鞋');
-var qitaxienan = createObject(54, '其他');
-var content7 = [yundongxienan, pixienan, fanbuxienan, qiuxienan, banxienan, qitaxienan];
-var nanxie = createType('男鞋', content7);
-var beibao = createObject(55, '背包');
-var lvxingxiang = createObject(56, '旅行箱');
-var qitaxiang = createObject(57, '其他');
-var content8 = [beibao, lvxingxiang, qitaxiang];
-var xiangbao = createType('箱包', content8);
-var jixiebiao = createObject(58, '机械表');
-var shiyingbiao = createObject(59, '石英表');
-var dianzibiao = createObject(60, '电子表');
-var qitabiao = createObject(61, '其他');
-var content9 = [jixiebiao, shiyingbiao, dianzibiao, qitabiao];
-var shoubiao = createType('手表', content9);
-var zuqiu = createObject(62, '足球');
-var yumaoqiupai = createObject(63, '羽毛球拍');
-var wangqiupai = createObject(64, '网球拍');
-var lanqiu = createObject(65, '篮球');
-var lunhua = createObject(66, '轮滑');
-var bingbangqiupai = createObject(67, '乒乓球拍');
-var huaban = createObject(68, '滑板');
-var qitaqixie = createObject(69, '其他');
-var content10 = [zuqiu, yumaoqiupai, wangqiupai, lanqiu, lunhua, bingbangqiupai, huaban, qitaqixie];
-var qicai = createType('器材', content10);
-var zixingche = createObject(70, '自行车');
-var diandongche = createObject(71, '电动车');
-var qitadaibu = createObject(72, '其他');
-var content11 = [zixingche, diandongche, qitadaibu];
-var daibu = createType('代步', content11);
-var wenxue = createObject(73, '文学');
-var manhua = createObject(74, '漫画');
-var xiaoshuo = createObject(75, '小说');
-var qitaxiuyang = createObject(76, '其他');
-var content12 = [wenxue, manhua, xiaoshuo, qitaxiuyang];
-var xiuyang = createType('修养', content12);
-var shengwu = createObject(77, '生物');
-var huaxue = createObject(78, '化学');
-var wuli = createObject(79, '物理');
-var yuwen = createObject(80, '语文');
-var waiyu = createObject(81, '外语');
-var shuxue = createObject(82, '数学');
-var zhengzhi = createObject(83, '政治');
-var lishi = createObject(84, '历史');
-var dili = createObject(85, '地理');
-var jisuanji = createObject(86, '计算机');
-var jixie = createObject(87, '机械');
-var tumu = createObject(88, '土木');
-var yishu = createObject(89, '艺术');
-var qitashu = createObject(90, '其他');
-var content13 = [shengwu, huaxue, wuli, yuwen, waiyu, shuxue, zhengzhi, lishi, dili,
-    jisuanji, jixie, tumu, yishu, qitashu];
-var zhuanye = createType('专业', content13);
+shouji.content = [zhengji, baohumo, shoujike, qitashouji];
+
+
+var bijiben = createObject(5, '笔记本');
+var taishiji = createObject(6, '台式机');
+var pingban = createObject(7, '平板');
+var shubiaojianpan = createObject(8, '鼠标键盘');
+var xianshiqi = createObject(9, '显示器');
+var zhuji = createObject(10, '主机');
+var wangluochanpin = createObject(11, '网络产品');
+var qitadiannao = createObject(12, '其他');
+var content = [bijiben,taishiji,pingban,shubiaojianpan,xianshiqi,zhuji,wangluochanpin,qitadiannao];
+var diannao = createType('电脑', content);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('13', '相机', null, '3');
+INSERT INTO `specifickinds` VALUES ('14', '镜头', null, '3');
+INSERT INTO `specifickinds` VALUES ('15', '摄影器材', null, '3');
+INSERT INTO `specifickinds` VALUES ('16', '其他', null, '3');
+*/
+var xiangji = createObject(13, '相机');
+var jingtou = createObject(14, '镜头');
+var sheyingqicai = createObject(15, '摄影器材');
+var qitaxiangji = createObject(16, '其他');
+var content1 = [xiangji, jingtou, sheyingqicai, qitaxiangji];
+var sheyingshexiang = createType('摄影摄像', content1);
+
+/*
+INSERT INTO `specifickinds` VALUES ('17', '洗衣机', null, '4');
+INSERT INTO `specifickinds` VALUES ('18', '饮水机', null, '4');
+INSERT INTO `specifickinds` VALUES ('19', '电吹风', null, '4');
+INSERT INTO `specifickinds` VALUES ('20', '风扇', null, '4');
+INSERT INTO `specifickinds` VALUES ('21', '空调', null, '4');
+INSERT INTO `specifickinds` VALUES ('22', '其他', null, '4');
+*/
+var xiyiji = createObject(17, '洗衣机');
+var yinshuiji = createObject(18, '饮水机');
+var dianchuifeng = createObject(19, '电吹风');
+var fengshan = createObject(20, '风扇');
+var kongtiao = createObject(21, '空调');
+var qitadianqi = createObject(22, '其他');
+var content2 = [xiyiji,yinshuiji,dianchuifeng,fengshan,kongtiao,qitadianqi];
+var dianqi = createType('电器', content2);
+
+/*
+INSERT INTO `specifickinds` VALUES ('23', '耳机', null, '5');
+INSERT INTO `specifickinds` VALUES ('24', '收音机', null, '5');
+INSERT INTO `specifickinds` VALUES ('25', '无人机', null, '5');
+INSERT INTO `specifickinds` VALUES ('26', '其他', null, '5');
+*/
+var erji = createObject(23, '耳机');
+var shouyinji = createObject(24, '收音机');
+var wurenji = createObject(25, '无人机');
+var qitaqitashumadianqi = createObject(26, '其他');
+var content3 = [erji,shouyinji,wurenji,qitaqitashumadianqi];
+var qitashumadianqi = createType('家电', content3);
+
+/*
+INSERT INTO `specifickinds` VALUES ('27', '补水', null, '6');
+INSERT INTO `specifickinds` VALUES ('28', '保湿', null, '6');
+INSERT INTO `specifickinds` VALUES ('29', '祛痘去角质', null, '6');
+INSERT INTO `specifickinds` VALUES ('30', '其他', null, '6');
+*/
+var bushui = createObject(27, '补水');
+var baoshi = createObject(28, '保湿');
+var qudouqujiaozhi = createObject(29, '祛痘去角质');
+var qitahufupin = createObject(30, '其他');
+var content4 = [bushui, baoshi, qudouqujiaozhi, qitahufupin];
+var hufupin = createType('护肤品', content4);
+
+/*
+INSERT INTO `specifickinds` VALUES ('31', '美容', null, '7');
+INSERT INTO `specifickinds` VALUES ('32', '美发', null, '7');
+INSERT INTO `specifickinds` VALUES ('33', '美甲', null, '7');
+INSERT INTO `specifickinds` VALUES ('34', '其他', null, '7');
+*/
+var meirong = createObject(31, '美容');
+var meifa = createObject(32, '美发');
+var meijia = createObject(33, '美甲');
+var qitacaizhuang = createObject(34, '其他');
+var content5 = [meirong,meifa,meijia,qitacaizhuang];
+var caizhuang = createType('彩妆', content5);
+
+/*
+INSERT INTO `specifickinds` VALUES ('35', '洗发护发', null, '8');
+INSERT INTO `specifickinds` VALUES ('36', '沐浴用品', null, '8');
+INSERT INTO `specifickinds` VALUES ('37', '口腔清洁', null, '8');
+INSERT INTO `specifickinds` VALUES ('38', '其他', null, '8');
+*/
+var xifahufa = createObject(35, '洗发护发');
+var muyuyongpin = createObject(36, '沐浴用品');
+var kouqiangqingjie = createObject(37, '口腔清洁');
+var qitaqingjieweisheng = createObject(38, '其他');
+var content6 = [xifahufa,muyuyongpin,kouqiangqingjie,qitaqingjieweisheng];
+var qingjieweisheng = createType('清洁卫生', content6);
+
+/*
+INSERT INTO `specifickinds` VALUES ('39', '其他', null, '9');
+*/
+var qitaqitagerenhuli = createObject(39, '其他');
+var content7 = [qitaqitagerenhuli];
+var qitagerenhuli = createType('其他', content7);
+
+
+/*INSERT INTO `specifickinds` VALUES ('40', '蚊帐', null, '10');
+INSERT INTO `specifickinds` VALUES ('41', '眼罩耳塞', null, '10');
+INSERT INTO `specifickinds` VALUES ('42', '床头灯', null, '10');
+INSERT INTO `specifickinds` VALUES ('43', '其他', null, '10');*/
+var wenzhang = createObject(40, '蚊帐');
+var yanzhaoersai = createObject(41, '眼罩耳塞');
+var chuangtoudeng = createObject(42, '床头灯');
+var qitachuangshangyongpin = createObject(43, '其他');
+var content8 = [wenzhang, yanzhaoersai, chuangtoudeng, qitachuangshangyongpin];
+var chuangshangyongpin = createType('床上用品', content8);
+
+/*
+INSERT INTO `specifickinds` VALUES ('44', '盆栽盆景', null, '11');
+INSERT INTO `specifickinds` VALUES ('45', '多肉植物', null, '11');
+INSERT INTO `specifickinds` VALUES ('46', '水培植物', null, '11');
+INSERT INTO `specifickinds` VALUES ('47', '园艺工具', null, '11');
+INSERT INTO `specifickinds` VALUES ('48', '其他', null, '11');*/
+var penzaipenjing = createObject(44, '盆栽盆景');
+var duorouzhiwu = createObject(45, '多肉植物');
+var shuipeizhiwu = createObject(46, '水培植物');
+var yuanyigongju = createObject(47, '园艺工具');
+var qitahuahuilvzhi = createObject(48, '其他');
+var content9 = [penzaipenjing, duorouzhiwu,shuipeizhiwu,yuanyigongju,qitahuahuilvzhi];
+var huahuilvzhi = createType('花卉绿植', content9);
+
+/*
+INSERT INTO `specifickinds` VALUES ('49', '窗帘', null, '12');
+INSERT INTO `specifickinds` VALUES ('50', '靠垫坐垫', null, '12');
+INSERT INTO `specifickinds` VALUES ('51', '抱枕', null, '12');
+INSERT INTO `specifickinds` VALUES ('52', '墙纸', null, '12');
+INSERT INTO `specifickinds` VALUES ('53', '摆件装饰', null, '12');
+INSERT INTO `specifickinds` VALUES ('54', '闹钟', null, '12');
+INSERT INTO `specifickinds` VALUES ('55', '其他', null, '12');*/
+var chuanglian = createObject(49, '窗帘');
+var kaodianzuodian = createObject(50, '靠垫坐垫');
+var baozhen = createObject(51, '抱枕');
+var qiangzhi = createObject(52, '墙纸');
+var baijianzhuangshi = createObject(53, '摆件装饰');
+var naozhong = createObject(54, '闹钟');
+var qitabuyijiashi = createObject(55, '其他');
+var content10 = [chuanglian,kaodianzuodian,baozhen,qiangzhi,baijianzhuangshi,naozhong,qitabuyijiashi];
+var buyijiashi = createType('布艺家饰', content10);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('56', '衣架', null, '13');
+INSERT INTO `specifickinds` VALUES ('57', '收纳盒&收纳袋', null, '13');
+INSERT INTO `specifickinds` VALUES ('58', '垃圾桶&垃圾袋', null, '13');
+INSERT INTO `specifickinds` VALUES ('59', '防尘', null, '13');
+INSERT INTO `specifickinds` VALUES ('60', '扫帚拖把', null, '13');
+INSERT INTO `specifickinds` VALUES ('61', '除湿防潮', null, '13');
+INSERT INTO `specifickinds` VALUES ('62', '除菌防虫', null, '13');
+INSERT INTO `specifickinds` VALUES ('63', '其他', null, '13');*/
+var yijia = createObject(56, '衣架');
+var shounahe_shounadai = createObject(57, '收纳盒&收纳袋');
+var lajitong_lajidai = createObject(58, '垃圾桶&垃圾袋');
+var fangchen = createObject(59, '防尘');
+var saozhoutuoba = createObject(60, '扫帚拖把');
+var chushifangchao = createObject(61, '除湿防潮');
+var chujunfangchong = createObject(62, '除菌防虫');
+var qitashounaqingjie = createObject(63, '其他');
+var content11 = [yijia,shounahe_shounadai,lajitong_lajidai,fangchen,saozhoutuoba,chushifangchao,chujunfangchong,qitashounaqingjie];
+var shounaqingjie = createType('收纳清洁', content11);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('64', '其他', null, '14');*/
+var qitaqitashenghuojiaju = createObject(64, '其他');
+var content12 = [qitaqitashenghuojiaju];
+var qitashenghuojiaju = createType('其他', content12);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('65', '上装', null, '15');
+INSERT INTO `specifickinds` VALUES ('66', '下装', null, '15');
+INSERT INTO `specifickinds` VALUES ('67', '鞋帽', null, '15');
+INSERT INTO `specifickinds` VALUES ('68', '假发', null, '15');
+INSERT INTO `specifickinds` VALUES ('69', '其他', null, '15');*/
+var shangzhuangnan = createObject(65, '上装');
+var xiazhuangnan = createObject(66, '下装');
+var xiemaonan = createObject(67, '鞋帽');
+var jiafanan = createObject(68, '假发');
+var qitananzhuang = createObject(69, '其他');
+var content13 = [shangzhuangnan,xiazhuangnan,xiemaonan,jiafanan,qitananzhuang];
+var nanzhuang = createType('男装', content13);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('70', '上装', null, '16');
+INSERT INTO `specifickinds` VALUES ('71', '下装', null, '16');
+INSERT INTO `specifickinds` VALUES ('72', '鞋帽', null, '16');
+INSERT INTO `specifickinds` VALUES ('73', '假发', null, '16');
+INSERT INTO `specifickinds` VALUES ('74', '其他', null, '16');*/
+var shangzhuangnv = createObject(70, '上装');
+var xiazhuangnv = createObject(71, '下装');
+var xiemaonv = createObject(72, '鞋帽');
+var jiafanv = createObject(73, '假发');
+var qitanvzhuang = createObject(74, '其他');
+var content14 = [shangzhuangnv,xiazhuangnv,xiemaonv,jiafanv,qitanvzhuang];
+var nvzhuang = createType('女装', content14);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('75', '手表', null, '17');
+INSERT INTO `specifickinds` VALUES ('76', '耳环', null, '17');
+INSERT INTO `specifickinds` VALUES ('77', '手链项链', null, '17');
+INSERT INTO `specifickinds` VALUES ('78', '其他', null, '17');*/
+var shoubiao = createObject(75, '手表');
+var erhuan = createObject(76, '耳环');
+var shoulianxianglain = createObject(77, '手链项链');
+var qitapeishi = createObject(78, '其他');
+var content15 = [shoubiao,erhuan,shoulianxianglain,qitapeishi];
+var peishi = createType('配饰', content15);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('79', '男包', null, '18');
+INSERT INTO `specifickinds` VALUES ('80', '女包', null, '18');
+INSERT INTO `specifickinds` VALUES ('81', '背包', null, '18');
+INSERT INTO `specifickinds` VALUES ('82', '手提', null, '18');
+INSERT INTO `specifickinds` VALUES ('83', '行李箱', null, '18');
+INSERT INTO `specifickinds` VALUES ('84', '其他', null, '18');*/
+var nanbao = createObject(79, '男包');
+var nvbao = createObject(80, '女包');
+var beibao = createObject(81, '背包');
+var shouti = createObject(82, '手提');
+var xinglixiang = createObject(83, '行李箱');
+var qitaxiangbao = createObject(84, '其他');
+var content16 = [nanbao,nvbao,beibao,shouti,xinglixiang,qitaxiangbao];
+var xiangbao = createType('箱包', content16);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('85', '其他', null, '19');*/
+var qitaqitafushixiangbao = createObject(85, '其他');
+var content17 = [qitaqitafushixiangbao];
+var qitafushixiangbao = createType('其他', content17);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('86', '教材教辅', null, '20');
+INSERT INTO `specifickinds` VALUES ('87', '考试资料', null, '20');
+INSERT INTO `specifickinds` VALUES ('88', '畅销文学', null, '20');
+INSERT INTO `specifickinds` VALUES ('89', '期刊杂志', null, '20');
+INSERT INTO `specifickinds` VALUES ('90', '其他', null, '20');*/
+var jiaocaijiaofu = createObject(86, '教材教辅');
+var kaoshiziliao = createObject(87, '考试资料');
+var changxiaowenxue = createObject(88, '畅销文学');
+var qikanzazhi = createObject(89, '期刊杂志');
+var qitatushu = createObject(90, '其他');
+var content18 = [jiaocaijiaofu,kaoshiziliao,changxiaowenxue,qikanzazhi,qitatushu];
+var tushu = createType('图书', content18);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('91', '笔', null, '21');
+INSERT INTO `specifickinds` VALUES ('92', '墨', null, '21');
+INSERT INTO `specifickinds` VALUES ('93', '纸', null, '21');
+INSERT INTO `specifickinds` VALUES ('94', '其他', null, '21');*/
 var bi = createObject(91, '笔');
-var qitawenju = createObject(92, '其他');
-var content14 = [bi, qitawenju];
-var wenju = createType('文具', content14);
-var qitaqita = createObject(94, '其他');
-var content15 = [qitaqita];
-var qitaA = createType('其他', content15);
-var type_list = [[shouji, xiangji, diannao], [jiadian, yingyin],
-    [nvzhuang, nanzhuang, nvxie, nanxie, xiangbao, shoubiao], [qicai, daibu]
-    , [xiuyang, zhuanye, wenju], [qitaA]];
+var mo = createObject(92, '墨');
+var zhi = createObject(93, '纸');
+var qitawenju = createObject(94, '其他');
+var content19 = [bi,mo,zhi,qitawenju];
+var wenju = createType('文具', content19);
+
+/*
+INSERT INTO `specifickinds` VALUES ('95', '乐器', null, '22');
+INSERT INTO `specifickinds` VALUES ('96', '绘画工具', null, '22');
+INSERT INTO `specifickinds` VALUES ('97', '其他', null, '22');*/
+var yueqi = createObject(95, '乐器');
+var huihuagongju = createObject(96, '绘画工具');
+var qitayishu = createObject(97, '其他');
+var content20 = [yueqi,huihuagongju,qitayishu];
+var yishu = createType('艺术', content20);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('98', '其他', null, '23');*/
+var qitaqitajiaoyu = createObject(98, '其他');
+var content21 = [qitaqitajiaoyu];
+var qitajiaoyu = createType('其他', content21);
+
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('99', '零食', null, '24');
+INSERT INTO `specifickinds` VALUES ('100', '茶酒', null, '24');
+INSERT INTO `specifickinds` VALUES ('101', '乳品冲饮', null, '24');
+INSERT INTO `specifickinds` VALUES ('102', '水果', null, '24');
+INSERT INTO `specifickinds` VALUES ('103', '其他', null, '24');*/
+var lingshi = createObject(99, '零食');
+var chajiu = createObject(100, '茶酒');
+var rupinchongyin = createObject(101, '乳品冲饮');
+var shuiguo = createObject(102, '水果');
+var qitashipin = createObject(103, '其他');
+var content22 = [lingshi,chajiu,rupinchongyin,shuiguo,qitashipin];
+var shipin = createType('食品', content22);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('104', '维生素', null, '25');
+INSERT INTO `specifickinds` VALUES ('105', '安神助眠', null, '25');
+INSERT INTO `specifickinds` VALUES ('106', '缓解疲劳', null, '25');
+INSERT INTO `specifickinds` VALUES ('107', '提神醒脑', null, '25');
+INSERT INTO `specifickinds` VALUES ('108', '其他', null, '25');*/
+var weishengsu = createObject(104, '维生素');
+var anshenzhumian = createObject(105, '安神助眠');
+var huanjiepilao = createObject(106, '缓解疲劳');
+var tishenxingnao = createObject(107, '提神醒脑');
+var qitabaojianpin = createObject(108, '其他');
+var content23 = [weishengsu,anshenzhumian,huanjiepilao,tishenxingnao,qitabaojianpin];
+var baojianpin = createType('保健品', content23);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('109', '伤口包扎', null, '26');
+INSERT INTO `specifickinds` VALUES ('110', '常备药物', null, '26');
+INSERT INTO `specifickinds` VALUES ('111', '其他', null, '26');*/
+var shangkoubaoza = createObject(109, '伤口包扎');
+var changbeiyaowu = createObject(110, '常备药物');
+var qitayiyaoyongpin = createObject(111, '其他');
+var content24 = [shangkoubaoza,changbeiyaowu,qitayiyaoyongpin];
+var yiyaoyongpin = createType('医药用品', content24);
+
+
+/*
+INSERT INTO `specifickinds` VALUES ('112', '其他', null, '27');*/
+var qitaqitashipinyiyao = createObject(112, '其他');
+var content25 = [qitaqitashipinyiyao];
+var qitashipinyiyao = createType('其他', content25);
+
+/*
+INSERT INTO `specifickinds` VALUES ('113', '其他', null, '28');*/
+var qitaqitaqita = createObject(113, '其他');
+var content26 = [qitaqitaqita];
+var qitaqita = createType('其他', content26);
+
+
+
+var type_list = [
+    [shouji,diannao,sheyingshexiang,dianqi,qitashumadianqi],
+    [hufupin,caizhuang,qingjieweisheng,qitagerenhuli],
+    [chuangshangyongpin,huahuilvzhi,buyijiashi,shounaqingjie,qitashenghuojiaju],
+    [nanzhuang,nvzhuang,peishi,xiangbao,qitafushixiangbao],
+    [tushu,wenju,yishu,qitajiaoyu],
+    [shipin,baojianpin,yiyaoyongpin,qitashipinyiyao],
+    [qitaqita]
+];
+
+
 function createObject(id, name) {
     var temp = new Object();
     temp.id = id;
