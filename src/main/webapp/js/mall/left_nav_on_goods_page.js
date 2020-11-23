@@ -1,6 +1,4 @@
-/**
- * Created by alone on 2017/5/14.
- */
+
 $(function () {
     insertShopCar();
     var type_list = getTypeList();
@@ -28,6 +26,8 @@ $(function () {
             addList(4);
         } else if (temp_class == 'type_6') {
             addList(5);
+        } else if (temp_class == 'type_7') {
+            addList(6);
         }
         function addList(id) {
             var which = type_list[id];
