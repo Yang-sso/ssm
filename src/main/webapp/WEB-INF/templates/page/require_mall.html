@@ -227,12 +227,13 @@
 <div th:include="personal_nav :: personal_nav" class="personal_nav"></div>
 <div class="my_type_div">
     <ul>
-        <li class="type_1">数码科技</li>
-        <li class="type_2">影音家电</li>
-        <li class="type_3">鞋服配饰</li>
-        <li class="type_4">运动代步</li>
-        <li class="type_5">书籍文具</li>
-        <li class="type_6">其他</li>
+        <li class="type_1">数码电器</li>
+        <li class="type_2">个人护理</li>
+        <li class="type_3">生活家居</li>
+        <li class="type_4">服饰箱包</li>
+        <li class="type_5">教育</li>
+        <li class="type_6">食品医药</li>
+        <li class="type_7">其他</li>
     </ul>
 </div>
 <div class="particular_type_div" onmouseleave="hideParticular()">
@@ -241,9 +242,7 @@
     <div class="one_part">
     </div>
 </div>
-<!--求购详情，加多一个多余的div，然分页按钮可以显示在内容之下-->
 <div class="temp_content" onmousedown="hideParticular()">
-    <!--注意需要加一个br，不然会在同一行显示-->
     <div class="require_content_div">
         <div class="require_one_part" id="1" th:each="o:${list}">
             <span class="what_info">商品名：</span>
@@ -255,7 +254,7 @@
             <span class="what_info" style="float: left">详情：</span>
 
             <textarea readonly="readonly" class="info_content" style="resize: none;width: 250px;height: 100px"
-                      th:text="${o.remark}">这是一哈哈哈哈哈哈哈哈哈打撒打撒个商品，联系电话1111111111</textarea><br/>
+                      th:text="${o.remark}">这是xxx，联系电话xxxxxxxxx</textarea><br/>
 
             <span class="what_info">分类：</span>
             <span class="info_content" th:text="${o.sort}">数码科技-手机-苹果</span><br/>
@@ -274,7 +273,7 @@
         <a class="pagination_gt">&gt;</a>
     </div>
     <footer>
-        <p>Copyright © 2017.Company name All rights reserved.<a href="/"></a></p>
+        <p>Fudan Exchange<a href="/"></a></p>
     </footer>
 </div>
 </body>
