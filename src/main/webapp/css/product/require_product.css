@@ -41,7 +41,7 @@
 }
 .publish_one_par .publish_content input {
     border-radius: 5px;
-    border: 1px solid slateblue;
+    border: 1px solid #3f51b5;
     padding: 0.3em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     font-size: 1em;
@@ -50,7 +50,7 @@
 .publish_one_par .publish_content select {
     width: 29%;
     border-radius: 5px;
-    border: 1px solid slateblue;
+    border: 1px solid #3f51b5;
     padding: 0.3em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     font-size: 0.9em;
@@ -67,14 +67,14 @@ textarea.detail_textarea {
     height: 5em;
     resize: none;
     border-radius: 5px;
-    border: 1px solid slateblue;
+    border: 1px solid #3f51b5;
     padding: 0.3em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.3em;
 }
 span.to_left {
     float: left;
-    color: slateblue;
+    color: #3f51b5;
     padding-top: 0.4em;
     font-weight: 800;
 }
@@ -88,12 +88,12 @@ span.to_left {
 .submit_content_div .submit_input {
     width: 30%;
     border-radius: 5px;
-    border: 1px solid slateblue;
+    border: 1px solid #3f51b5;
     padding: 0.3em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.3em;
     color: rgba(0,0,0,0.7);
-    background-color: slateblue;
+    background-color: #3f51b5;
     color: white;
 }
 .submit_content_div .submit_input:hover {
@@ -102,7 +102,7 @@ span.to_left {
 
 footer {
     width: 96%;
-    background-color: slateblue;
+    background-color: #3f51b5;
     box-shadow: 4px 2px 10px #888888;
     border-radius: 10px;
     height: 80px;

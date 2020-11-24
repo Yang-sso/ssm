@@ -128,7 +128,7 @@ nav.my_nav {
 }
 
 nav.my_nav ul {
-    color: slateblue;
+    color: #3f51b5;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -140,13 +140,13 @@ nav.my_nav ul li {
     float: left;
     margin-left: 3%;
     padding-right: 3%;
-    border-right: 3px solid slateblue;
+    border-right: 3px solid #3f51b5;
     font-size: 1em;
 }
 nav.my_nav ul li a{
     text-decoration: none;
     font-size: 1em;
-    color: slateblue;
+    color: #3f51b5;
 }
 nav.my_nav ul li:last-child {
     border-right: none;
@@ -190,7 +190,7 @@ nav.my_nav ul li:last-child {
 }
 .short_nav_show ul li:hover {
     cursor: pointer;
-    background-color: slateblue;
+    background-color: #3f51b5;
 }
 .personal_nav {
     position: fixed;
@@ -230,6 +230,6 @@ nav.my_nav ul li:last-child {
 }
 .personal_nav ul li:hover {
     cursor: pointer;
-    background-color: slateblue;
+    background-color: #3f51b5;
 }
 

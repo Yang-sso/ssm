@@ -10,7 +10,7 @@ $(function () {
         var id = $(this).attr('id');
         $('.shipping_address').each(function () {
             if ($(this).attr('id')==id) {
-                $(this).css({"border-color": "slateblue"});
+                $(this).css({"border-color": "#3f51b5"});
                 which = id;
             }else {
                 $(this).css({"border-color": "rgba(0,0,0,0.1)"});
