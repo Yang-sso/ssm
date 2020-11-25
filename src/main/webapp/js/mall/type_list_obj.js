@@ -60,7 +60,7 @@ var shouyinji = createObject(24, '收音机');
 var wurenji = createObject(25, '无人机');
 var qitaqitashumadianqi = createObject(26, '其他');
 var content3 = [erji,shouyinji,wurenji,qitaqitashumadianqi];
-var qitashumadianqi = createType('家电', content3);
+var qitashumadianqi = createType('其他', content3);
 
 /*
 INSERT INTO `specifickinds` VALUES ('27', '补水', null, '6');
