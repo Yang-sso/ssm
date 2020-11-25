@@ -1,7 +1,7 @@
 header {
     width: 99%;
     max-height: 80px;
-    background-color: blueviolet;
+    background-color: #3f51b5;
     box-shadow: 5px 5px 10px #888888;
     position: fixed;
     margin-top: -10px;
